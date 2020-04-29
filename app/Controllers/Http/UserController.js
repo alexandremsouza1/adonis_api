@@ -10,6 +10,11 @@ class UserController {
 
     return user
   }
+  async show () {
+    const users = await User.all()
+
+    return users
+  }
 }
 
 module.exports = UserController
