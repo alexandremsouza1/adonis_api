@@ -16,8 +16,15 @@
 /** @type {typeof import('@adonisjs/framework/src/Route/Manager')} */
 const Route = use('Route')
 
+
+Route.get('/', () => 'Hello Adonis')
+
+
 Route.group(() => {
   Route.post('users', 'UserController.create')
+
+  Route.post('events', 'EventoController.create')
+
   Route.post('sessions', 'SessionController.create')
   Route.post('show', 'UserController.show')
 }).prefix('api')
